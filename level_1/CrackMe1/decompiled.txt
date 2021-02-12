@@ -1,0 +1,40 @@
+//* Decompile the code using JD-GUI 
+
+package me.ohwhite.crackme1;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class eahUaRpTUmfhN {
+  static ArrayList<Integer> password_array = new ArrayList<>();
+  
+  static ArrayList<String> success = new ArrayList<>();
+  
+  public static void main(String[] args) {
+    welcome_msg();
+    set_password();
+    
+    System.out.println(success.get(0));
+    Scanner scan = new Scanner(System.in);
+
+    try {
+      int user_input = scan.nextInt();
+      if (user_input != ((Integer)password_array.get(0)).intValue())
+
+        return; 
+
+    } catch (Exception exception) {
+      System.exit(-7);
+    } 
+
+    System.out.println(success.get(1));
+  }
+  
+  public static void set_password() {
+    password_array.add(Integer.valueOf(5256));
+  }
+  
+  public static void welcome_msg() {
+    success.add("Enter an 8 digit code: ");
+    success.add("You have successfully logged in!");
+  }
